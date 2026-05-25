@@ -2,26 +2,73 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwiftTrack Global Courier</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
+<!-- TOP BAR -->
+<div class="top-bar">
+    <span>📦 Global Tracking System</span>
+    <span>🌍 South Korea Route Enabled</span>
+</div>
+
+<!-- HEADER -->
+<header class="header">
     <h1>SwiftTrack Global Courier</h1>
-    <p>Fast. Secure. Worldwide Delivery.</p>
+    <p>Fast. Secure. Worldwide Delivery Network</p>
 </header>
 
-<section class="tracking-box">
-    <h2>Track Your Parcel</h2>
-    <input type="text" id="trackingInput" placeholder="Enter Tracking Code">
-    <button onclick="trackParcel()">Track</button>
-
-    <div id="result"></div>
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-text">
+        <h2>Track Your Parcel in Real Time</h2>
+        <p>Enter your tracking number to view live shipment status, route, and delivery updates.</p>
+    </div>
 </section>
 
-<footer>
-    <p>International Shipping • South Korea Route Enabled</p>
+<!-- TRACKING BOX -->
+<section class="tracking-container">
+
+    <div class="tracking-card">
+
+        <h3>Parcel Tracking</h3>
+
+        <input type="text" id="trackingInput" placeholder="Enter Tracking Code (e.g. SK2026001)">
+
+        <button onclick="trackParcel()">Track Shipment</button>
+
+        <div id="result"></div>
+
+    </div>
+
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+
+    <div class="feature">
+        🚚 <h4>Fast Delivery</h4>
+        <p>Optimized international shipping routes</p>
+    </div>
+
+    <div class="feature">
+        🌍 <h4>Global Coverage</h4>
+        <p>Asia, Europe, Africa & Americas</p>
+    </div>
+
+    <div class="feature">
+        🔒 <h4>Secure Tracking</h4>
+        <p>Encrypted shipment data system</p>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 SwiftTrack Global Courier • All Rights Reserved</p>
 </footer>
 
 <script src="script.js"></script>
