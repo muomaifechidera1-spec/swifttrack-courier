@@ -2,26 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SwiftTrack Global Courier</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
+<!-- TOP BAR -->
+<div class="top-bar">
+    <span>📦 Global Logistics Network</span>
+    <span>🌍 South Korea • Dubai • Singapore Routes</span>
+</div>
+
+<!-- HEADER -->
+<header class="header">
     <h1>SwiftTrack Global Courier</h1>
-    <p>Fast. Secure. Worldwide Delivery.</p>
+    <p>Fast. Secure. Intelligent Global Tracking System</p>
 </header>
 
-<section class="tracking-box">
-    <h2>Track Your Parcel</h2>
-    <input type="text" id="trackingInput" placeholder="Enter Tracking Code">
-    <button onclick="trackParcel()">Track</button>
-
-    <div id="result"></div>
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-text">
+        <h2>Real-Time Parcel Tracking</h2>
+        <p>
+            Track your shipment across continents with live updates,
+            route intelligence, and delivery forecasting.
+        </p>
+    </div>
 </section>
 
-<footer>
-    <p>International Shipping • South Korea Route Enabled</p>
+<!-- TRACKING SECTION -->
+<section class="tracking-container">
+
+    <div class="tracking-card">
+
+        <h3>Enter Tracking Number</h3>
+
+        <input type="text" id="trackingInput" placeholder="e.g. SK2026001">
+
+        <button onclick="trackParcel()">Track Shipment</button>
+
+        <div id="result"></div>
+
+    </div>
+
+</section>
+
+<!-- STATUS INFO SECTION -->
+<section class="features">
+
+    <div class="feature">
+        🚚 <h4>Live Tracking</h4>
+        <p>Real-time shipment monitoring system</p>
+    </div>
+
+    <div class="feature">
+        🌍 <h4>Global Network</h4>
+        <p>International hubs across major cities</p>
+    </div>
+
+    <div class="feature">
+        📊 <h4>Smart Updates</h4>
+        <p>AI-powered delivery prediction system</p>
+    </div>
+
+</section>
+
+<!-- IMAGE SECTION (AI VISUAL PLACEHOLDERS) -->
+<section class="image-section">
+
+    <h2>Global Logistics Network</h2>
+
+    <div class="image-grid">
+
+        <div class="img-box">
+            <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7" alt="Warehouse">
+            <p>Distribution Hub</p>
+        </div>
+
+        <div class="img-box">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Air Cargo">
+            <p>Air Freight Network</p>
+        </div>
+
+        <div class="img-box">
+            <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc" alt="Delivery Truck">
+            <p>Ground Delivery System</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2026 SwiftTrack Global Courier • Advanced Logistics Intelligence System</p>
 </footer>
 
 <script src="script.js"></script>
