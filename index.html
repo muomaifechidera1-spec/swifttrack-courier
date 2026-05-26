@@ -1,74 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SwiftTrack Global Courier</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SwiftTrack Global Courier</title>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- TOP BAR -->
-<div class="top-bar">
-    <span>📦 Global Tracking System</span>
-    <span>🌍 South Korea Route Enabled</span>
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>SwiftTrack Global Courier — Sandton, Johannesburg</div>
+    <div class="topbar-links">
+      <a href="#">Customer Service</a>
+      <a href="#">ZA: +27 11 000 0000</a>
+      <a href="#">Login</a>
+    </div>
+  </div>
 </div>
 
-<!-- HEADER -->
-<header class="header">
-    <h1>SwiftTrack Global Courier</h1>
-    <p>Fast. Secure. Worldwide Delivery Network</p>
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24"><path d="M1 3h15v13H1V3zm15 5h4l3 3v5h-7V8zM6 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm13 0a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+      </div>
+      <div class="logo-text">
+        SwiftTrack
+        <span>Global Courier</span>
+      </div>
+    </div>
+    <nav>
+      <a href="#" class="active">Track</a>
+      <a href="#">Services</a>
+      <a href="#">Routes</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<!-- HERO SECTION -->
 <section class="hero">
-    <div class="hero-text">
-        <h2>Track Your Parcel in Real Time</h2>
-        <p>Enter your tracking number to view live shipment status, route, and delivery updates.</p>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <h1>Express <span>Worldwide</span> Delivery</h1>
+      <p>From Sandton to Seoul and everywhere between — SwiftTrack moves your documents across 220 countries with speed, precision, and complete visibility.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">220+</div>
+          <div class="stat-label">Countries</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">2 Days</div>
+          <div class="stat-label">Korea Transit</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">99.6%</div>
+          <div class="stat-label">On-Time Rate</div>
+        </div>
+      </div>
     </div>
+
+    <div class="track-card">
+      <h2>Track a Parcel</h2>
+      <div class="track-input-row">
+        <input type="text" id="trackingInput" placeholder="Enter your tracking number" maxlength="20" oninput="this.value = this.value.toUpperCase()">
+        <button class="track-btn" onclick="trackParcel()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          Track
+        </button>
+      </div>
+      <div class="demo-codes">
+        Example format: <span style="font-family:'Oswald',sans-serif; font-size:12px; letter-spacing:0.06em; color:#3D3D3D;">SWT-00000-ZA</span> &nbsp;·&nbsp; <span style="font-family:'Oswald',sans-serif; font-size:12px; letter-spacing:0.06em; color:#3D3D3D;">SWT-00000-KR</span>
+      </div>
+      <div id="result"></div>
+    </div>
+  </div>
 </section>
 
-<!-- TRACKING BOX -->
-<section class="tracking-container">
-
-    <div class="tracking-card">
-
-        <h3>Parcel Tracking</h3>
-
-        <input type="text" id="trackingInput" placeholder="Enter Tracking Code (e.g. SK2026001)">
-
-        <button onclick="trackParcel()">Track Shipment</button>
-
-        <div id="result"></div>
-
+<section class="services">
+  <div class="services-inner">
+    <div class="section-label">What We Offer</div>
+    <div class="section-title">Our Services</div>
+    <div class="services-grid">
+      <div class="service-item">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <div class="service-title">Document Delivery</div>
+        <div class="service-desc">Secure, express delivery of academic and legal documents to universities and institutions worldwide.</div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="service-title">Economy Shipping</div>
+        <div class="service-desc">Reliable and cost-effective delivery for non-urgent parcels worldwide.</div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div class="service-title">Freight Solutions</div>
+        <div class="service-desc">Heavy cargo and bulk freight handled with specialist equipment and routing.</div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="service-title">Secure Parcels</div>
+        <div class="service-desc">High-value items shipped with enhanced security, insurance, and chain of custody.</div>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div class="service-title">International Routes</div>
+        <div class="service-desc">Direct connections to South Korea, Asia-Pacific, Europe, and the Americas.</div>
+      </div>
     </div>
-
+  </div>
 </section>
 
-<!-- FEATURES -->
-<section class="features">
-
-    <div class="feature">
-        🚚 <h4>Fast Delivery</h4>
-        <p>Optimized international shipping routes</p>
+<section class="route-highlight">
+  <div class="route-highlight-inner">
+    <div>
+      <div class="section-label">Featured Corridor</div>
+      <div class="section-title">South Africa → South Korea</div>
+      <p>Departing from our Sandton headquarters, documents reach South Korean universities in just 2 days via air freight — with two optimised routing options, full live tracking, and guaranteed delivery windows for time-sensitive admissions submissions.</p>
+      <div>
+        <div class="route-tag">● SDT → DXB → ICN (Seoul)</div>
+        <div class="route-tag">● SDT → SIN → ICN (Seoul)</div>
+        <div class="route-tag">● SDT → DXB → Jeonju</div>
+      </div>
     </div>
-
-    <div class="feature">
-        🌍 <h4>Global Coverage</h4>
-        <p>Asia, Europe, Africa & Americas</p>
+    <div class="route-map">
+      <div class="route-map-title">Active University Destinations</div>
+      <div class="route-path">
+        <div class="route-node">
+          <div class="node-circle">A</div>
+          <div class="node-info">
+            <div class="node-city">Hankuk University of Foreign Studies</div>
+            <div class="node-role">Office of International Admissions — Seoul 02450</div>
+          </div>
+        </div>
+        <div class="node-arrow" style="padding-left:0; margin: 8px 0;">·</div>
+        <div class="route-node">
+          <div class="node-circle">B</div>
+          <div class="node-info">
+            <div class="node-city">Jeonbuk National University (JBNU)</div>
+            <div class="node-role">Office of International Affairs — Jeonju-si 54896</div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="feature">
-        🔒 <h4>Secure Tracking</h4>
-        <p>Encrypted shipment data system</p>
-    </div>
-
+  </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <p>© 2026 SwiftTrack Global Courier • All Rights Reserved</p>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-text">SwiftTrack<span>Global Courier</span></div>
+        <p>Based in Sandton, Johannesburg — connecting South Africa to the world since 2009. Fast, reliable, and fully tracked from door to door.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#">Document Delivery</a>
+        <a href="#">Economy Shipping</a>
+        <a href="#">Freight</a>
+        <a href="#">Customs Clearance</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Partners</a>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">Track a Parcel</a>
+        <a href="#">FAQ</a>
+        <a href="#">Claims</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 SwiftTrack Global Courier. All rights reserved.</div>
+      <div class="footer-badges">
+        <div class="badge">ISO 9001</div>
+        <div class="badge">IATA Certified</div>
+        <div class="badge">Korea Route Enabled</div>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <script src="script.js"></script>
